@@ -1,3 +1,6 @@
+<?php 
+    include 'modele/connexionbdd.php';
+?>
 <!DOCTYPE HTML>
 <html>
     <?php 
