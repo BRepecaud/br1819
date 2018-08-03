@@ -42,6 +42,22 @@
                 -->
                 <!--------------------------------LIGNE--> 
                 <div class="row"> 
+                    <?php
+                        foreach($projet as $proj)
+                        {
+                            echo '
+                                
+                                <div class="col-lg-4">
+                                   <div class="thumbnail">
+                                        <a href="vue/descprojet.php?nomprojet='.$proj['nomprojet'].'">
+                                            <img src="media/'.$proj['vignette'].'" alt="" width="100%">
+                                        </a>    
+                                   </div>
+                                </div>
+
+                            ';
+                        }
+                    ?>
                     <!--------------------------------projet1--> 
                     <div class="col-lg-4">
                         <div class="thumbnail">
