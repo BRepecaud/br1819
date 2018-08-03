@@ -1,0 +1,47 @@
+body 
+{
+  /*POur passer sous le menu fixe*/ 
+  box-sizing: border-box;
+  /*padding-top: 70px;*/
+  width:100%;
+}
+
+html,body
+{
+    height: 100%;
+    position:relative;
+}
+
+[class*="col-"], footer 
+{
+  border: 2px solid black;
+}
+
+/*
+*****************************************
+MENU
+*****************************************
+*/
+#navbr
+{
+   /* background-color: ghostwhite;*/
+}
+
+#menubrand
+{
+    padding-top: 0;
+}
+
+/*
+*****************************************
+PAGE ACCUEIL
+*****************************************
+*/
+#accueil, #presentation, #projets, #contact
+{
+    /*background:url(../media/background.gif);*/
+    background-color: beige;
+    background-size: cover;
+    width:100%;
+    min-height: 100%;
+}
