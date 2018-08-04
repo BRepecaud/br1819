@@ -34,32 +34,30 @@
                     <img src="" alt="infographie">
                     <img src="" alt="vidéo">
                 </div>
-                <!--
-                    PHP
-                foreach projet
-                    ==> div class="col-lg-4"
-                        ==> img src media/"vignetteprojet"
-                -->
                 <!--------------------------------LIGNE--> 
                 <div class="row"> 
-                    <!--------------------------------projet1--> 
-                    <div class="col-lg-4">
-                        <div class="thumbnail">
-                            <a href="vue/descprojet.php"><img src="media/remanence2.png" alt="" width="100%"></a>
-                        </div>
-                    </div>
-                    <!--------------------------------projet2--> 
-                    <div class="col-lg-4">
-                        <div class="thumbnail">
-                            <img src="media/remanence3.png" alt="" width="100%">
-                        </div>
-                    </div>
-                    <!--------------------------------projet3--> 
-                    <div class="col-lg-4">
-                        <div class="thumbnail">
-                            <img src="media/remanence4.png" alt="" width="100%">
-                        </div>
-                    </div>
+                    <?php
+                    /*
+                        Pour chaque projet: 'thumbnail' de 4 colonnes
+                        * $proj['entiteBDD'] *
+                        a href: passage en paramètre des données utiles pour la page descprojet
+                        img: vignette 
+                    */
+                        foreach($projets as $proj)
+                        {
+                            echo '
+                                
+                                <div class="col-lg-4">
+                                   <div class="thumbnail">
+                                        <a href="vue/descprojet.php?nomprojet='.$proj['nomprojet'].'">
+                                            <img src="'.$proj['vignette'].'" alt="" width="100%">
+                                        </a>    
+                                   </div>
+                                </div>
+
+                            ';
+                        }
+                    ?>
                 </div>
             </div>
         </div>

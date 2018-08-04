@@ -1,4 +1,4 @@
 <?php
 //------------CONTROLEUR
-    include('vue/main.php');
+    include('vue/contact.php');
 ?>
