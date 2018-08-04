@@ -3,14 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/br1819/vue/contact.php</file>
-            <file>file:/C:/wamp64/www/br1819/vue/presentation.php</file>
-            <file>file:/C:/wamp64/www/br1819/style/style.css</file>
-            <file>file:/C:/wamp64/www/br1819/vue/head.php</file>
-            <file>file:/C:/wamp64/www/br1819/vue/projets.php</file>
+            <file>file:/C:/wamp64/www/br1819/controleur/cContact.php</file>
+            <file>file:/C:/wamp64/www/br1819/vue/vProjets.php</file>
+            <file>file:/C:/wamp64/www/br1819/controleur/cDescprojet.php</file>
+            <file>file:/C:/wamp64/www/br1819/vue/vMain.php</file>
+            <file>file:/C:/wamp64/www/br1819/vue/vDescprojet.php</file>
             <file>file:/C:/wamp64/www/br1819/index.php</file>
-            <file>file:/C:/wamp64/www/br1819/controleur/main.php</file>
-            <file>file:/C:/wamp64/www/br1819/vue/main.php</file>
+            <file>file:/C:/wamp64/www/br1819/controleur/cMain.php</file>
+            <file>file:/C:/wamp64/www/br1819/vue/vMenu.php</file>
         </group>
     </open-files>
 </project-private>
