@@ -45,5 +45,20 @@ function recup_all()
     return $projets;
 }
 
+/*
+    RECUP DE LA DESCRIPTION DES PROJETS
+*/
+function recup_desc()
+{
+    $bdd = connexion();
+    
+    $requete_sql = $bdd->prepare("SELECT * FROM projet WHERE nomprojet = ?");
+    $requete_sql->execute(array($_GET['nomprojet']));
+    
+    $desc = $requete_sql->fetch();
+    
+    return $desc;
+}
+
 ?>
 
