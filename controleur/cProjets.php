@@ -1,9 +1,9 @@
 <?php
 //------------CONTROLEUR
     
-    include('modele/projets.php');
+    require 'modele/modele.php';
     
     $projets = recup_all();
     
-    include('vue/projets.php');
+    require 'vue/vProjets.php';
 ?>

@@ -1,3 +1,6 @@
+<?php //require 'vMenu.php';?>
+
+
 <div id="accueil" class="container-fluid">
 
     <div class="row">

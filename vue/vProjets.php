@@ -49,7 +49,7 @@
                                 
                                 <div class="col-lg-4">
                                    <div class="thumbnail">
-                                        <a href="vue/descprojet.php?nomprojet='.$proj['nomprojet'].'">
+                                        <a href="index.php?action=descprojet&nomprojet='.$proj['nomprojet'].'">
                                             <img src="'.$proj['vignette'].'" alt="" width="100%">
                                         </a>    
                                    </div>
@@ -57,6 +57,7 @@
 
                             ';
                         }
+                        //endforeach
                     ?>
                 </div>
             </div>

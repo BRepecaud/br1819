@@ -1,27 +1,52 @@
-<?php 
-    include 'modele/connexionbdd.php';
-?>
 <!DOCTYPE HTML>
 <html>
     <?php 
-        include('vue/head.php'); 
+        require 'vue/head.php'; 
     ?>
     
     <body>
         <?php
 
     //---------------------------------------MENU
-            include('vue/menu.php');
+        require 'vue/vMenu.php';
             
     //---------------------------------------INCLUSION CONTROLEUR
+        /*
+            Soit descprojet, soit accueil
+         * vMenu: lien vers descprojet --> paramètre: action et nomprojet
+         * vérification de l'existance de ces paramètres
+         * si présent: require cDescprojet
+         * sinon: accueil
+        */
 
-            if(!empty($_GET['page']) && is_file('controleur/'.$_GET['page'].'.php'))
+            if(isset($_GET['action']))
             {
-                include('controleur/descprojet.php');
+                if(isset($_GET['action']) == 'descprojet')
+                {
+                    if(isset($_GET['nomprojet']))
+                    {
+                        require('controleur/cDescprojet.php');
+                    }
+                    
+                }
+                
             }
-            else{
-                include('controleur/main.php');
-                include('controleur/projets.php');
+            else
+            { 
+                /*
+
+                 * 
+                 * 
+                 * 
+                 * CONTROLEUR GLOBAL
+                 * 
+                 * 
+                 * 
+                 *                  */
+                require 'controleur/cMain.php';
+                require 'controleur/cPresentation.php';
+                require 'controleur/cProjets.php';
+                require 'controleur/cContact.php';
             }
         ?>
     </body>

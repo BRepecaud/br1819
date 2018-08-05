@@ -1,4 +1,4 @@
 <?php
 //------------CONTROLEUR
-    include('vue/main.php');
+    require 'vue/vContact.php';
 ?>

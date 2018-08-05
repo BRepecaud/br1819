@@ -1,6 +1,26 @@
 <?php
-include 'modele/connexionbdd.php';
 
+/*
+    CONNNEXION BDD
+*/
+function connexion()
+{
+    try
+    {
+        //-------------mysql:host=nomServeur; dbname=nomBDD; charset=utf8', 'nomUser', 'mdp');
+        $bdd = new PDO('mysql:host=localhost; dbname=br1819_essai; charset=utf8', 'root', '');
+        return $bdd;
+    }
+    catch(Exception $e)
+    {
+        die('Erreur:'.$e.getMessage());
+    }
+
+}
+
+/*
+    RECUP DE TOUS LES PROJETS
+*/
 function recup_all()
 {
     $bdd = connexion();
@@ -26,3 +46,4 @@ function recup_all()
 }
 
 ?>
+

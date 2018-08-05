@@ -1,4 +1,4 @@
 <?php
 //------------CONTROLEUR
-    include('vue/menu.php');
+    include('vue/vMenu.php');
 ?>

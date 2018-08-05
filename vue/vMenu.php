@@ -20,16 +20,16 @@
                     <!-- NAVIGATION (située à droite) -->
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"> <!-- addClass active à la page active -->
-                            <a href="#accueil">Accueil</a>
+                            <a href="index.php#accueil">Accueil</a>
                         </li>
                         <li>
-                            <a href="#presentation">Présentation</a>
+                            <a href="index.php#presentation">Présentation</a>
                         </li>
                         <li>
-                            <a href="#projets">Projets</a>
+                            <a href="index.php#projets">Projets</a>
                         </li>                    
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a href="index.php#contact">Contact</a>
                         </li>                    
                     </ul>
                 </div>
