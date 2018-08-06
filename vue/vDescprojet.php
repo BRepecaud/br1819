@@ -8,12 +8,32 @@
                 </h3>
             </header>
             
-            <!-- IMAGE DU PROJET -->
+            <!-- IMAGE / VIDEO DU PROJET   -->
             <div class="row">
                 <div class="col-lg-offset-3 col-lg-6">
-                    <div class="thumbnail">
-                        <img class="col-lg-12" src="<?= $desc['lien']; ?>">
-                    </div>
+                    
+                        <?php 
+                            $categorie = $desc['categorie'];
+                            
+                            //if categorie == infographie ou developpement --> img...
+                            if(($categorie == 'Infographie') || ($categorie == 'Développement')) :
+                        ?>
+                            <div class="thumbnail">
+                                <img class="col-lg-12" src="<?= $desc['lien']; ?>">
+                            </div>
+                    
+                        <?php 
+                            //... sinon --> iframe
+                            elseif ($categorie == 'Vidéo'): 
+                        ?>
+                            <div class="embed-responsive embed-responsive-4by3">        
+                                <iframe  src="<?= $desc['lien']; ?>" allowfullscreen="allowfullscreen"></iframe>    
+                            </div>   
+                    
+                        <?php endif; ?>
+                        
+                        
+                    
                 </div>
             </div>
             
