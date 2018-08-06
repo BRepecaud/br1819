@@ -14,25 +14,19 @@
                 <!--------------------------------Catégorie projets--> 
                 <div class="col-lg-12">
                     <ul id="menuprojet" class="nav">
-                        <li class="categorie-active">
-                            <a class="nav-link " href="#/">TOUT</a>
+                        <li class="tout categorie-active col-lg-3">
+                            <a class="nav-link " href="#/"><i class="glyphicon glyphicon-th"></i></a>
                         </li>
-                        <li>
-                            <a class="nav-link" href="#/">Développement</a>
+                        <li class="developpement col-lg-3">
+                            <a class="nav-link" href="#/"><i class="glyphicon glyphicon-globe"></i></a>
                         </li>
-                        <li>
-                            <a class="nav-link" href="#/">Infographie</a>
+                        <li class="infographie col-lg-3">
+                            <a class="nav-link" href="#/"><i class="glyphicon glyphicon-leaf"></i></a>
                         </li>
-                        <li>
-                            <a class="nav-link" href="#/">Vidéo</a>
+                        <li class="video col-lg-3">
+                            <a class="nav-link" href="#/"><i class="glyphicon glyphicon-facetime-video"></i></a>
                         </li>
                     </ul>
-                </div>
-                <!--------------------------------Pictogramme projets--> 
-                <div class="col-lg-12">
-                    <img src="" alt="développement">
-                    <img src="" alt="infographie">
-                    <img src="" alt="vidéo">
                 </div>
                 <!--------------------------------LIGNE--> 
                 <div class="row"> 
@@ -47,7 +41,7 @@
                         {
                             echo '
                                 
-                                <div class="col-lg-4 '.$proj['categorie'].'">
+                                <div class="projet col-lg-4 '.$proj['categorie'].'">
                                    <div class="thumbnail">
                                         <a href="index.php?action=descprojet&nomprojet='.$proj['nomprojet'].'">
                                             <img src="'.$proj['vignette'].'" alt="" width="100%">
