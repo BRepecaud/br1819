@@ -10,7 +10,7 @@
                         <img id="hamburger" src="media/hamburger.png"> 
                     </button> 
                     <!-- LOGO MENU -->
-                    <a id="menubrand" class="navbar-brand" href="#">
+                    <a id="menubrand" class="navbar-brand" href="index.php#accueil">
                         <img src="media/logo_br_clair.png" alt="Logo Benjamin Répécaud étudiant licence informatique" width="5%" >
                     </a>                    
                 </div>                
