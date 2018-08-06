@@ -1,5 +1,41 @@
 $(document).ready(function(){
-   
+
+/*
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+--------------------------VARIABLES
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+*/    
+
+//-------------------------Menu Main
+    var liMain = $("#menumain li");
+    var classMain = "main-active";
+
+//-------------------------Menu Projet
+    var liProjet = $("#menuprojet li");
+    var classProjet = "categorie-active";
+    var allProjet = $(".projet");
+
+//-------------------------Class
+    var classDev = "developpement";
+    var classInfo = "infographie";
+    var classVideo = "video";  
+
+//-------------------------Paramètres animations
+    var vitesseIn = 2000;
+    var vitesseOut = 500;
+
+/*
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+--------------------------FONCTIONS
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+*/ 
+
+    ajoutClass(liMain, classMain, false);
+    ajoutClass(liProjet, classProjet, true);     
 /*
  ******************************
  * AJOUT CLASSE ACTIVE
@@ -8,36 +44,69 @@ $(document).ready(function(){
     Paramètres:
         -chemin du li correspondant 
         -nom de la classe à ajouter
-*/
-    var liMain = $("#menumain li");
-    var classMain = "main-active";
-    
-    var liProjet = $("#menuprojet li");
-    var classProjet = "categorie-active";
-
-    function ajoutClass(cheminLi, nomClass)
+        -booléen pour l'exécution du filtreprojet
+*/    
+    function ajoutClass(cheminLi, nomClass, ouiNon)
     {
-      cheminLi.click( function() {
-          $("."+nomClass).toggleClass(nomClass);
-          $(this).toggleClass(nomClass);
-      });        
+        cheminLi.stop().click( function(event) {
+            $("."+nomClass).toggleClass(nomClass);
+            $(this).toggleClass(nomClass);
+
+            if(ouiNon === true)
+            {
+              filtreProjet($(this));              
+            }
+
+            event.preventDefault();
+        });           
     }
     
-    ajoutClass(liMain, classMain);
-    ajoutClass(liProjet, classProjet);
-   
- 
-    // if class == dev --> effacer tout + afficher div à la class dev
-    // if class == infographie --> effacer tout + afficher div à la class infographie
-    // if class == video --> effacer tout + afficher div à la class video
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+/*
+ ******************************
+ * FILTRE DES PROJETS
+ ******************************
+--> suivant la categorie active (passée en paramètre): affiche les projets en question
+--> appel de la fonction afficheProjet
+*/ 
+    function filtreProjet(categorie)
+    {
+        if(categorie.hasClass(classDev))
+        {
+            afficheProjet(classDev);
+        }
+        else if(categorie.hasClass(classInfo))
+        {
+            afficheProjet(classInfo);
+        }
+        else if(categorie.hasClass(classVideo))
+        {
+            afficheProjet(classVideo);
+        }
+        else
+        {
+            afficheTout();
+        }
+    }
+
+/*
+ ******************************
+ * AFFICHAGE
+ ******************************
+-->affichage des projets suivant la class passée en paramètre
+*/ 
+    function afficheProjet(nomCategorie)
+    {
+        $(".projet").fadeOut(vitesseOut);
+        $(".picto-categorie").fadeOut(vitesseOut);
+        
+        $("."+nomCategorie).fadeIn(vitesseIn);        
+    }
+    
+    function afficheTout()
+    {
+        allProjet.fadeOut(vitesseOut);
+        allProjet.fadeIn(vitesseIn);
+    }
+
+
 });
