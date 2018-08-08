@@ -18,8 +18,8 @@
                 <!--Collapse: détecter le responsive-->
                 <div  class="collapse navbar-collapse" id="menuprincipal">                
                     <!-- NAVIGATION (située à droite) -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"> <!-- addClass active à la page active -->
+                    <ul id="menumain" class="nav navbar-nav navbar-right">
+                        <li class="main-active"> <!-- addClass active à la page active -->
                             <a href="index.php#accueil">Accueil</a>
                         </li>
                         <li>
