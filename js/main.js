@@ -26,6 +26,12 @@ $(document).ready(function(){
     var vitesseIn = 2000;
     var vitesseOut = 500;
 
+//-------------------------Formulaire
+    var blocFormulaire = $("#form-contact");
+    var champFormulaire = $(".form-control");
+    var btnFormulaire = $("#btn-envoi");
+    var messageErreur = $("#form-erreur");
+    var messageValide = $("#form-valide");
 /*
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
@@ -48,7 +54,7 @@ $(document).ready(function(){
 */    
     function ajoutClass(cheminLi, nomClass, ouiNon)
     {
-        cheminLi.stop().click( function(event) {
+        cheminLi.stop().click( function() {
             $("."+nomClass).toggleClass(nomClass);
             $(this).toggleClass(nomClass);
 
@@ -56,8 +62,9 @@ $(document).ready(function(){
             {
               filtreProjet($(this));              
             }
-
-            event.preventDefault();
+            
+            //--------Empêche le menu de fonctionner
+            //event.preventDefault();
         });           
     }
     
@@ -109,4 +116,77 @@ $(document).ready(function(){
     }
 
 
+/*
+ ******************************
+ * CHAMP FORMULAIRE
+ ******************************
+-->champ vert ou rouge si rempli ou non (blur: quitte du focus)
+*/ 
+    champFormulaire.blur(function( )
+    {
+        if(!$(this).val())
+        {
+            $(this).parent('div').removeClass('has-success');
+            $(this).parent('div').addClass('has-error');
+        }
+        else
+        {
+            $(this).parent('div').removeClass('has-error');
+            $(this).parent('div').addClass('has-success');
+        }
+    } );
+
+/*
+ ******************************
+ * ENVOI FORMULAIRE
+ ******************************
+-->1- event pour ne pas changer d'écran / ne pas charger mail.php
+-->2- appel envoiForm()
+*/     
+    blocFormulaire.submit(function(event)
+    {
+        event.preventDefault();
+        envoiForm();
+    });
+
+/*
+ ******************************
+ * ENVOI FORMULAIRE
+ ******************************
+-->récupération des valeurs de chaque champ
+-->ajax: 
+    envoi des données à mail.php
+    si succes: affichage messageValide
+    sinon: affichage messageErreur
+*/       
+    function envoiForm()
+    {
+            
+        var nom = $("#nom").val();
+        var prenom = $("#prenom").val();
+        var email = $("#email").val();
+        var objet = $("#objet").val();
+        var message = $("#message").val();
+        
+        $.ajax
+        ({
+           type:"POST",
+           url:"modele/mail.php",
+           data:"nom=" + nom + "&prenom=" + prenom + "&email=" + email + "&objet=" + objet + "&message=" + message,
+           success: function(text)
+           {
+               if(text == true)
+               {
+                    messageErreur.addClass("hidden");
+                    messageValide.removeClass("hidden");
+               }
+               else
+               {
+                    messageValide.addClass("hidden");
+                    messageErreur.removeClass("hidden");
+               }
+           }
+        });
+    }
+    
 });
