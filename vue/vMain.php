@@ -6,7 +6,7 @@
     <div class="row">
         <header class="page-header">
             <img class="img-responsive" src="media/logo_br_clair.png" alt="Logo Benjamin Répécaud" width="20%">
-        </header>        
+        </header>   
         <!--<div class="col-lg-12">
             <img class="img-responsive" src="media/logo_br_clair.png" alt="Logo Benjamin Répécaud" width="20%">
         </div>-->
