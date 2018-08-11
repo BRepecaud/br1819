@@ -18,29 +18,32 @@
             Barre
         </div>
         <div class="col-lg-5">
-            <form>
+            <form id="form-contact" method="post" action="modele/mail.php">
                 <!----------------------------------------------------NOM/PRENOM-->                 
                 <div class="form-group col-lg-5">
-                    <input type="text" class="form-control col-lg-5" placeholder="Nom" name="nom">
+                    <input type="text" class="form-control col-lg-5" placeholder="Nom" name="nom" id="nom">
                 </div>
                 
                 <div class="form-group col-lg-5">
-                    <input type="text" class="form-control col-lg-5" placeholder="Prénom" name="prenom">
+                    <input type="text" class="form-control col-lg-5" placeholder="Prénom" name="prenom" id="prenom">
                 </div>
                 
                 <!----------------------------------------------------EMAIL-->                 
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email" name="email">
+                    <input type="email" class="form-control" placeholder="Email" name="email" id="email">
                 </div>
                 <!----------------------------------------------------OBJET-->                 
                 <div class="form-group col-lg-5">
-                    <input type="text" class="form-control" placeholder="Objet" name="objet">
+                    <input type="text" class="form-control" placeholder="Objet" name="objet" id="objet">
                 </div>
                 <!----------------------------------------------------MESSAGE-->                 
                 <div class="form-group">
-                    <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                    <textarea class="form-control" rows="3" cols="45" placeholder="Message" name="message" id="message"></textarea>
                 </div>
-                <button type="submit" class="btn">Envoyer</button>
+                <button id="btn-envoi" type="submit" class="btn pull-right">Envoyer</button>
+                
+                <h4 id="form-valide" class="hidden">Message envoyé !</h4>
+                <h4 id="form-erreur" class="hidden">Un ou plusieurs champs manquants.</h4>
             </form>
         </div>
     </div>

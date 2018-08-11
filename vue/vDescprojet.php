@@ -1,6 +1,5 @@
 <div id="descprojet" class="container-fluid">
     <div class="row">
-        <div class="col-lg-8">
             <header class="page-header">
                 <h1><?= $desc['nomprojet']; ?></h1>
                 <h3>
@@ -13,21 +12,51 @@
                 <div class="col-lg-offset-3 col-lg-6">
                     
                         <?php 
+                            //echo $nombreImage;
                             $categorie = $desc['categorie'];
                             
                             //if categorie == infographie ou developpement --> img...
-                            if(($categorie == 'Infographie') || ($categorie == 'Développement')) :
+                            if(($categorie == 'infographie') || ($categorie == 'developpement')) :
                         ?>
-                            <div class="thumbnail">
-                                <img class="col-lg-12" src="<?= $desc['lien']; ?>">
-                            </div>
+        
+                        <!--  CAROUSEL  -->
+                            <div id="carouselprojet" class="carousel slide" data-ride="carousel">
+                                <ol>
+                                    <?php 
+                                        //----------Suivant le nombre d'image du projet, nombre de li (data-to-slide) différent
+                                        for($i=0; $i<$nombreImage; $i++): 
+                                            if($i == 0): 
+                                                $class = 'active';
+                                            endif;
+                                    ?>
+                                        <li data-target="#carouselprojet" data-slide-to="<?=$i;?>" class="<?= $class; ?>"></li>
+                                    <?php endfor; ?>
+                                </ol>
+                                
+                                <div class="carousel-inner">
+                                    <?php foreach($img as $pic): ?>
+                                    <?php
+                                            //----Si premier élément: class active
+                                            if($img[0] == $pic):
+                                                $class = 'item active';
+                                            //----Sinon: qu'item
+                                            else:
+                                                $class = 'item';
+                                            endif;
+                                    ?>                                   
+                                    <div class="<?= $class ?>">
+                                        <img class="col-lg-12" src="<?= $pic['lien_carousel']; ?>" alt='<?= $pic['alt_carousel'] ?>'>                
+                                    </div>                                    
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>  
                     
                         <?php 
                             //... sinon --> iframe
-                            elseif ($categorie == 'Vidéo'): 
+                            elseif ($categorie == 'video'):
                         ?>
                             <div class="embed-responsive embed-responsive-4by3">        
-                                <iframe  src="<?= $desc['lien']; ?>" allowfullscreen="allowfullscreen"></iframe>    
+                                <iframe  src="<?= $video['lien_carousel']; ?>" allowfullscreen="allowfullscreen"></iframe>    
                             </div>   
                     
                         <?php endif; ?>
@@ -65,31 +94,9 @@
                     </div>
                 </dl>
             </div>
-        </div>
-        
-        <!--CAROUSEL-->
-        <div class="col-lg-4">
-            <div id="carouselprojet" class="carousel slide" data-ride="carousel">
-                <ol>
-                    <li data-target="#carouselprojet" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselprojet" data-slide-to="1" class="active"></li>
-                    <li data-target="#carouselprojet" data-slide-to="2" class="active"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img class="col-lg-12" src="<?= $desc['lien']?>">                
-                    </div>
-                    <div class="item">
-                        <img class="col-lg-12" src="media/remanence1.png">                
-                    </div>
-                    <div class="item">
-                        <img class="col-lg-12" src="media/remanence2.png">                
-                    </div>
-                    
-                </div>
-            </div>
+
             
-        </div>
+
     </div>
 </div>
 
