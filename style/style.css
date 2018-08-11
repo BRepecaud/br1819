@@ -37,11 +37,20 @@ MENU
 PAGE ACCUEIL
 *****************************************
 */
-#accueil, #presentation, #projets, #contact
+#accueil, #presentation, #projets, #contact, #descprojet
 {
-    /*background:url(../media/background.gif);*/
-    background-color: beige;
+
+    /*background-color: beige;*/
     background-size: cover;
     width:100%;
     min-height: 100%;
+}
+
+#background{
+    position:fixed;
+    background:url(../media/composants/background.png);
+    background-size:cover;  
+    width:100%;
+    height:100%;
+    z-index: -1;
 }
