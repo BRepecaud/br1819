@@ -15,16 +15,16 @@
                 <div class="col-lg-12">
                     <ul id="menuprojet" class="nav">
                         <li class="tout categorie-active col-lg-3">
-                            <a class="nav-link " href="#/"><i class="glyphicon glyphicon-th"></i></a>
+                            <a class="nav-link " href="#/"><i><img src="media/composants/tout.png" width="50px" height="50px"></i></a>
                         </li>
                         <li class="developpement col-lg-3">
-                            <a class="nav-link" href="#/"><i class="glyphicon glyphicon-globe"></i></a>
+                            <a class="nav-link" href="#/"><i><img src="media/composants/dev.png" width="50px" height="50px"></i></a>
                         </li>
                         <li class="infographie col-lg-3">
-                            <a class="nav-link" href="#/"><i class="glyphicon glyphicon-leaf"></i></a>
+                            <a class="nav-link" href="#/"><i><img src="media/composants/pinceau.png" width="50px" height="50px"></i></a>
                         </li>
                         <li class="video col-lg-3">
-                            <a class="nav-link" href="#/"><i class="glyphicon glyphicon-facetime-video"></i></a>
+                            <a class="nav-link" href="#/"><i><img src="media/composants/video.png" width="50px" height="50px"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -41,10 +41,14 @@
                         {
                             echo '
                                 
-                                <div class="projet col-lg-4 '.$proj['categorie'].'">
+                                <div class="projet col-xs-4 '.$proj['categorie'].'">
                                    <div class="thumbnail">
                                         <a href="index.php?action=descprojet&nomprojet='.$proj['nomprojet'].'">
-                                            <img src="'.$proj['vignette'].'" alt="" width="100%">
+                                            <img src="'.$proj['vignette'].'" alt="'.$proj['alt_vignette'].'">
+
+                                                <h4>'.$proj['nomprojet'].'</h4>
+                                                <h5>'.$proj['alt_vignette'].'</h5>
+
                                         </a>    
                                    </div>
                                 </div>

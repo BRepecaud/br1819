@@ -19,18 +19,18 @@
                     <!--------------------------------Corps du panneau--> 
                     <div class="panel-body">
                         <ul class="list-group">
-                            <li class="list-group-item">21 ans</li>
-                            <li class="list-group-item">Etudiant en Licence Informatique</li>
-                            <li class="list-group-item">DEUG Informatique</li>
-                            <li class="list-group-item">DUT MMI</li>
+                            <li class="list-group-item"><i><img src="media/composants/puce.png" width="50px" height="10px"></i> 21 ans</li>
+                            <li class="list-group-item"><i><img src="media/composants/puce.png" width="50px" height="10px"> Etudiant en Licence Informatique <i class="glyphicon glyphicon-education"></i></li>
+                            <li class="list-group-item"><i><img src="media/composants/puce.png" width="50px" height="10px"> DEUG Informatique <i><img src="media/composants/check.png" width="50px" height="50px"></li>
+                            <li class="list-group-item"><i><img src="media/composants/puce.png" width="50px" height="10px"> DUT MMI <i><img src="media/composants/check.png" width="50px" height="50px"></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <button type="button" class="btn-warning">CV</button>
+                    <a href="media/REPECAUD_Benjamin_CV_2017-2018.pdf" target="blank" role="button" class="btn btn-warning" >CV</a>
                 </div>
                 <div class="col-lg-offset-4 col-lg-4">
-                    <button type="button" class="btn-warning">PROJETS</button>
+                    <a href="index.php#projets" role="button" class="btn btn-warning">PROJETS</a>
                 </div>
             </div>
         </div>
