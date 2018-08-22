@@ -5,6 +5,12 @@
                 <h3>
                     <?= $desc['annee']; ?> - <?= $desc['duree']; ?> 
                 </h3>
+
+                <?php if($desc['lien']!=null): ?>
+                    
+                    <h3><i class="glyphicon glyphicon-link"></i><a href="<?= $desc['lien'] ?>" target="blank"> Lien </a></h3>
+                <?php endif; ?>
+                    
             </header>
             
             <!-- IMAGE / VIDEO DU PROJET   -->
@@ -71,25 +77,25 @@
                 <dl>
                     <!--OBJECTIF-->
                     <div class="col-lg-5">
-                        <dt><i class="glyphicon glyphicon-ok"><!--<img src="media/hamburger.png">--></i> Objectif</dt>
+                        <dt><i><img src="media/composants/check.png" width="50px" height="50px"></i> Objectif</dt>
                         <dd><?= $desc['objectif']; ?></dd>
                     </div>
                     
                     <!--OUTILS-->
                     <div class="col-lg-offset-2 col-lg-5">
-                        <dt><i class="glyphicon glyphicon-cog"></i> Outils</dt>
+                        <dt><i><img src="media/composants/outils.png" width="50px" height="50px"></i> Outils</dt>
                         <dd><?= $desc['outil']; ?></dd>
                     </div>
                     
                     <!--INTERPRETATION-->
                     <div class="col-lg-5">
-                        <dt><i class="glyphicon glyphicon-pencil"></i> Interprétation</dt>
+                        <dt><i><img src="media/composants/interpretation.png" width="50px" height="50px"></i> Interprétation</dt>
                         <dd><?= $desc['interpretation']; ?></dd>
                     </div>
                     
                     <!--COMPETENCES-->
                     <div class="col-lg-offset-2 col-lg-5">
-                        <dt><i class="glyphicon glyphicon-bookmark"></i> Compétences</dt>
+                        <dt><i><img src="media/composants/competences.png" width="50px" height="50px"></i> Compétences</dt>
                         <dd><?= $desc['competences']; ?></dd>
                     </div>
                 </dl>
