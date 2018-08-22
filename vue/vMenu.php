@@ -7,11 +7,11 @@
                 <div class="navbar-header">
                     <!-- HAMBURGER -->
                     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#menuprincipal">
-                        <img id="hamburger" src="media/composants/hamburger.png"> 
+                        <img id="hamburger" src="media/composants/hamburger.png" width="25em"> 
                     </button> 
                     <!-- LOGO MENU -->
-                    <a id="menubrand" class="navbar-brand" href="index.php#accueil">
-                        <img src="media/logo_br_clair.png" alt="Logo Benjamin Répécaud étudiant licence informatique" width="5%" >
+                    <a id="menubrand" href="index.php#accueil"><!--class="navbar-brand"-->
+                        <img src="media/logo_br_sombre.png" alt="Logo Benjamin Répécaud étudiant licence informatique" width="5%" >
                     </a>                    
                 </div>                
 
@@ -20,16 +20,16 @@
                     <!-- NAVIGATION (située à droite) -->
                     <ul id="menumain" class="nav navbar-nav navbar-right">
                         <li class="main-active"> <!-- addClass active à la page active -->
-                            <a href="index.php#accueil">Accueil</a>
+                            <a href="index.php#accueil" class="smoothscroll" id="accueilmenu">Accueil</a>
                         </li>
                         <li>
-                            <a href="index.php#presentation">Présentation</a>
+                            <a href="index.php#presentation" class="smoothscroll" id="presentationmenu">Présentation</a>
                         </li>
                         <li>
-                            <a href="index.php#projets">Projets</a>
+                            <a href="index.php#projets" class="smoothscroll" id="projetsmenu">Projets</a>
                         </li>                    
                         <li>
-                            <a href="index.php#contact">Contact</a>
+                            <a href="index.php#contact" class="smoothscroll" id="contactmenu">Contact</a>
                         </li>                    
                     </ul>
                 </div>

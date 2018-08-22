@@ -7,24 +7,24 @@
         <header class="page-header">
             <h2>Projets</h2>
         </header>
-        <div class="col-lg-offset-1 col-lg-10">
+        <div id="centerprojets" class="col-lg-offset-1 col-lg-10">
             
             <!--------------------------------LIGNE-->            
-            <div class="row">
+            <div id="blocprojets" class="row">
                 <!--------------------------------Catégorie projets--> 
-                <div class="col-lg-12">
-                    <ul id="menuprojet" class="nav">
+                <div id="blocmenuprojets" class="col-lg-12">
+                    <ul id="menuprojets" class="nav">
                         <li class="tout categorie-active col-lg-3">
-                            <a class="nav-link " href="#/"><i><img src="media/composants/tout.png" width="50px" height="50px"></i></a>
+                            <a class="nav-link " href="#/"><span><img src="media/composants/tout.png" width="50em"></span></a>
                         </li>
                         <li class="developpement col-lg-3">
-                            <a class="nav-link" href="#/"><i><img src="media/composants/dev.png" width="50px" height="50px"></i></a>
+                            <a class="nav-link" href="#/"><span><img src="media/composants/dev.png" width="50em"></span></a>
                         </li>
                         <li class="infographie col-lg-3">
-                            <a class="nav-link" href="#/"><i><img src="media/composants/pinceau.png" width="50px" height="50px"></i></a>
+                            <a class="nav-link" href="#/"><span><img src="media/composants/pinceau.png" width="50em"></span></a>
                         </li>
                         <li class="video col-lg-3">
-                            <a class="nav-link" href="#/"><i><img src="media/composants/video.png" width="50px" height="50px"></i></a>
+                            <a class="nav-link" href="#/"><span><img src="media/composants/video.png" width="50em"></span></a>
                         </li>
                     </ul>
                 </div>
@@ -42,14 +42,15 @@
                             echo '
                                 
                                 <div class="projet col-xs-4 '.$proj['categorie'].'">
-                                   <div class="thumbnail">
+                                   <div class="vignette">                                   
                                         <a href="index.php?action=descprojet&nomprojet='.$proj['nomprojet'].'">
-                                            <img src="'.$proj['vignette'].'" alt="'.$proj['alt_vignette'].'">
-
+                                            <div class="hoverprojet">
                                                 <h4>'.$proj['nomprojet'].'</h4>
                                                 <h5>'.$proj['alt_vignette'].'</h5>
-
-                                        </a>    
+                                            </div>                                            
+                                            <img src="'.$proj['vignette'].'" alt="'.$proj['alt_vignette'].'" width="100%">
+                                        </a>  
+                                        
                                    </div>
                                 </div>
 

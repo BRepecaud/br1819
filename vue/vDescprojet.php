@@ -1,21 +1,20 @@
 <div id="descprojet" class="container-fluid">
     <div class="row">
-            <header class="page-header">
+            <header id="headerprojet" class="page-header">
                 <h1><?= $desc['nomprojet']; ?></h1>
                 <h3>
                     <?= $desc['annee']; ?> - <?= $desc['duree']; ?> 
                 </h3>
 
                 <?php if($desc['lien']!=null): ?>
-                    
-                    <h3><i class="glyphicon glyphicon-link"></i><a href="<?= $desc['lien'] ?>" target="blank"> Lien </a></h3>
+                <div id="linkprojet" class="h3"><a href="<?= $desc['lien'] ?>" target="blank"><span class="glyphicon glyphicon-link"></span> Lien </a></div>
                 <?php endif; ?>
                     
             </header>
             
             <!-- IMAGE / VIDEO DU PROJET   -->
             <div class="row">
-                <div class="col-lg-offset-3 col-lg-6">
+                <div class="col-lg-6">
                     
                         <?php 
                             //echo $nombreImage;
@@ -27,7 +26,7 @@
         
                         <!--  CAROUSEL  -->
                             <div id="carouselprojet" class="carousel slide" data-ride="carousel">
-                                <ol>
+                                <ol class="carousel-indicators">
                                     <?php 
                                         //----------Suivant le nombre d'image du projet, nombre de li (data-to-slide) différent
                                         for($i=0; $i<$nombreImage; $i++): 
@@ -55,8 +54,16 @@
                                     </div>                                    
                                     <?php endforeach; ?>
                                 </div>
+                                
+                                <!--CONTROLEURS CAROUSEL-->
+                                    <a class="left carousel-control" href="#carouselprojet" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+
+                                    <a class="right carousel-control" href="#carouselprojet" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
                             </div>  
-                    
                         <?php 
                             //... sinon --> iframe
                             elseif ($categorie == 'video'):
@@ -70,38 +77,42 @@
                         
                     
                 </div>
-            </div>
+            
             
             <!-- DESCRIPTIF DU PROJET -->
-            <div class="row">
+            <div id="blocdescprojet" class="col-lg-6">
                 <dl>
-                    <!--OBJECTIF-->
-                    <div class="col-lg-5">
-                        <dt><i><img src="media/composants/check.png" width="50px" height="50px"></i> Objectif</dt>
-                        <dd><?= $desc['objectif']; ?></dd>
+                    <div class="row">
+                        <!--OBJECTIF-->
+                        <div class="col-lg-5">
+                            <dt><span><img src="media/composants/check.png" width="50px" height="50px"></span> Objectif</dt>
+                            <dd class="col-lg-12"><?= $desc['objectif']; ?></dd>
+                        </div>
+
+                        <!--OUTILS-->
+                        <div class="col-lg-offset-2 col-lg-5">
+                            <dt><span><img src="media/composants/outils.png" width="50px" height="50px"></span> Outils</dt>
+                            <dd class="col-lg-12"><?= $desc['outil']; ?></dd>
+                        </div>
                     </div>
                     
-                    <!--OUTILS-->
-                    <div class="col-lg-offset-2 col-lg-5">
-                        <dt><i><img src="media/composants/outils.png" width="50px" height="50px"></i> Outils</dt>
-                        <dd><?= $desc['outil']; ?></dd>
-                    </div>
-                    
-                    <!--INTERPRETATION-->
-                    <div class="col-lg-5">
-                        <dt><i><img src="media/composants/interpretation.png" width="50px" height="50px"></i> Interprétation</dt>
-                        <dd><?= $desc['interpretation']; ?></dd>
-                    </div>
-                    
-                    <!--COMPETENCES-->
-                    <div class="col-lg-offset-2 col-lg-5">
-                        <dt><i><img src="media/composants/competences.png" width="50px" height="50px"></i> Compétences</dt>
-                        <dd><?= $desc['competences']; ?></dd>
+                    <div class="row">
+                        <!--INTERPRETATION-->
+                        <div class="col-lg-5">
+                            <dt><span><img src="media/composants/interpretation.png" width="50px" height="50px"></span> Interprétation</dt>
+                            <dd class="col-lg-12"><?= $desc['interpretation']; ?></dd>
+                        </div>
+
+                        <!--COMPETENCES-->
+                        <div class="col-lg-offset-2 col-lg-5">
+                            <dt><span><img src="media/composants/competences.png" width="50px" height="50px"></span> Compétences</dt>
+                            <dd class="col-lg-12"><?= $desc['competences']; ?></dd>
+                        </div>
                     </div>
                 </dl>
             </div>
 
-            
+        </div>   
 
     </div>
 </div>
