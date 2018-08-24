@@ -84,29 +84,29 @@
                 <dl>
                     <div class="row">
                         <!--OBJECTIF-->
-                        <div class="col-lg-5">
+                        <div class="col-xs-5">
                             <dt><span><img src="media/composants/check.png" width="50px" height="50px"></span> Objectif</dt>
-                            <dd class="col-lg-12"><?= $desc['objectif']; ?></dd>
+                            <dd class="col-xs-12"><?= $desc['objectif']; ?></dd>
                         </div>
 
                         <!--OUTILS-->
-                        <div class="col-lg-offset-2 col-lg-5">
+                        <div class="col-xs-offset-2 col-xs-5">
                             <dt><span><img src="media/composants/outils.png" width="50px" height="50px"></span> Outils</dt>
-                            <dd class="col-lg-12"><?= $desc['outil']; ?></dd>
+                            <dd class="col-xs-12"><?= $desc['outil']; ?></dd>
                         </div>
                     </div>
                     
                     <div class="row">
                         <!--INTERPRETATION-->
-                        <div class="col-lg-5">
+                        <div class="col-xs-5">
                             <dt><span><img src="media/composants/interpretation.png" width="50px" height="50px"></span> Interprétation</dt>
-                            <dd class="col-lg-12"><?= $desc['interpretation']; ?></dd>
+                            <dd class="col-xs-12"><?= $desc['interpretation']; ?></dd>
                         </div>
 
                         <!--COMPETENCES-->
-                        <div class="col-lg-offset-2 col-lg-5">
+                        <div class="col-xs-offset-2 col-xs-5">
                             <dt><span><img src="media/composants/competences.png" width="50px" height="50px"></span> Compétences</dt>
-                            <dd class="col-lg-12"><?= $desc['competences']; ?></dd>
+                            <dd class="col-xs-12"><?= $desc['competences']; ?></dd>
                         </div>
                     </div>
                 </dl>
