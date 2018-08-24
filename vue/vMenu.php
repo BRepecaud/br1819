@@ -19,8 +19,8 @@
                 <div  class="collapse navbar-collapse" id="menuprincipal">                
                     <!-- NAVIGATION (située à droite) -->
                     <ul id="menumain" class="nav navbar-nav navbar-right">
-                        <li class="main-active"> <!-- addClass active à la page active -->
-                            <a href="index.php#accueil" class="smoothscroll" id="accueilmenu">Accueil</a>
+                        <li class=""> <!-- addClass active à la page active -->
+                            <a href="index.php#accueil" class="main-active smoothscroll" id="accueilmenu">Accueil</a>
                         </li>
                         <li>
                             <a href="index.php#presentation" class="smoothscroll" id="presentationmenu">Présentation</a>
