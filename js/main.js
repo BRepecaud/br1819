@@ -7,13 +7,15 @@ $(document).ready(function(){
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 */    
+//-------------------------Données Ecran
 
+    
 //-------------------------Menu Main
-    var liMain = $("#menumain li");
+    var aMain = $("#menumain li a");
     var classMain = "main-active";
 
 //-------------------------Menu Projet
-    var liProjet = $("#menuprojet li");
+    var liProjet = $("#menuprojets li");
     var classProjet = "categorie-active";
     var allProjet = $(".projet");
 
@@ -40,7 +42,7 @@ $(document).ready(function(){
 ////////////////////////////////////////////////////////////////////////////
 */ 
 
-    ajoutClass(liMain, classMain, false);
+    //ajoutClass(aMain, classMain, false);
     ajoutClass(liProjet, classProjet, true);     
 /*
  ******************************
@@ -54,7 +56,8 @@ $(document).ready(function(){
 */    
     function ajoutClass(cheminLi, nomClass, ouiNon)
     {
-        cheminLi.stop().click( function() {
+        
+        cheminLi.stop().click( function() {  
             $("."+nomClass).toggleClass(nomClass);
             $(this).toggleClass(nomClass);
 
@@ -67,7 +70,89 @@ $(document).ready(function(){
             //event.preventDefault();
         });           
     }
+
+
+/*
+ ******************************
+ * SMOOTHSCROLL
+ ******************************
+ fonction permettant un scroll fluide
+    Paramètres:
+        -idancre: récupère l'attribut href du menu, supprime "index.php" de l'ancre
+            ==> résultat ["", #ancre], besoin que de la case [1]
+        -idancretop: récupère la position de l'ancre par rapport au top de la page
+*/ 
+    $(".smoothscroll").click(function(event)
+    {
+         
+        var idancre = $(this).attr("href").split("index.php")[1];
+        var idancretop = $(idancre).offset().top;
+        $("html, body").animate
+        ({
+            scrollTop : idancretop
+        }, 800);
+        
+        event.preventDefault();
+    });
+ 
+/*
+ ******************************
+ * SCROLL
+ ******************************
+ fonction changeant nav actif au scroll
+********************************************************
+* scrollPosition: position verticale du scroll
+* idAncre: id de l'ancre où l'écran est
+* aPosition: position de la section par rapport au top
+* hauteurSection: hauteur de l'onglet en question (position de la section + sa taille totale = hauteur)
+* positionEcran: position verticale de l'écran
+* longueurEcran: longueur de la page
+* longueurPage: longueur de la page totale    
+********************************************************    
+    si la position du haut de l'écran >= à position de la section correspondante (liPosition)
+    && qu'elle est inférieure à la taille de cette section (liPosition + aHref.height)
+        --> Ajout class active
     
+    si positionEcran + longueurEcran = longueur totale de la page 
+        --> arrivé au bout de la page
+        --> ajout class active à l'item contact
+*/     
+  $(document).on("scroll", scrollActif);
+  
+    function scrollActif(event)
+    {
+        var scrollPosition = $(document).scrollTop();
+        
+        aMain.each(function(){
+            
+            //-------------------------------Données Ecran
+            var aActif = $(this);
+            var idAncre = $(aActif.attr("href").split("index.php")[1]);
+            var aPosition = idAncre.offset().top;
+            var hauteurSection = aPosition + idAncre.height();
+            var positionEcran = $(window).scrollTop();
+            var longueurEcran = $(window).height();
+            var longueurPage = $(document).height();  
+            
+
+            //-------------------------------Affichage    
+            //Tout
+            if(scrollPosition >= aPosition && hauteurSection > scrollPosition)
+            {
+                aMain.removeClass(classMain);
+                aActif.addClass(classMain);   
+            }
+            
+            //Contact
+            if(positionEcran + longueurEcran == longueurPage)
+            {
+                aMain.removeClass(classMain);
+                $("#menumain #contactmenu").addClass(classMain);
+            }   
+        });
+        
+        event.preventDefault();
+    }
 /*
  ******************************
  * FILTRE DES PROJETS
@@ -188,5 +273,15 @@ $(document).ready(function(){
            }
         });
     }
+
     
+/*
+ ******************************
+ * SURVOL BOOTSTRAP
+ ******************************
+
+$("#menumain li").hover(function(){
+    console.log("yo");
+    $(this).css("background-color","none");
+} );*/ 
 });
