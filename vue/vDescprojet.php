@@ -4,11 +4,13 @@
                 <h1><?= $desc['nomprojet']; ?></h1>
                 <h3>
                     <?= $desc['annee']; ?> - <?= $desc['duree']; ?> 
+                    
+                    <?php if($desc['lien']!=null): ?>
+                    <div id="linkprojet"><a href="<?= $desc['lien'] ?>" target="blank"><span class="glyphicon glyphicon-link"></span> Lien </a></div>
+                    <?php endif; ?>                    
                 </h3>
 
-                <?php if($desc['lien']!=null): ?>
-                <div id="linkprojet" class="h3"><a href="<?= $desc['lien'] ?>" target="blank"><span class="glyphicon glyphicon-link"></span> Lien </a></div>
-                <?php endif; ?>
+
                     
             </header>
             
@@ -84,13 +86,13 @@
                 <dl>
                     <div class="row">
                         <!--OBJECTIF-->
-                        <div class="col-xs-5">
+                        <div class="col-sm-5">
                             <dt><span><img src="media/composants/check.png" width="50px" height="50px"></span> Objectif</dt>
                             <dd class="col-xs-12"><?= $desc['objectif']; ?></dd>
                         </div>
 
                         <!--OUTILS-->
-                        <div class="col-xs-offset-2 col-xs-5">
+                        <div class="col-sm-offset-2 col-sm-5">
                             <dt><span><img src="media/composants/outils.png" width="50px" height="50px"></span> Outils</dt>
                             <dd class="col-xs-12"><?= $desc['outil']; ?></dd>
                         </div>
@@ -98,13 +100,13 @@
                     
                     <div class="row">
                         <!--INTERPRETATION-->
-                        <div class="col-xs-5">
+                        <div class="col-sm-5">
                             <dt><span><img src="media/composants/interpretation.png" width="50px" height="50px"></span> Interprétation</dt>
                             <dd class="col-xs-12"><?= $desc['interpretation']; ?></dd>
                         </div>
 
                         <!--COMPETENCES-->
-                        <div class="col-xs-offset-2 col-xs-5">
+                        <div class="col-sm-offset-2 col-sm-5">
                             <dt><span><img src="media/composants/competences.png" width="50px" height="50px"></span> Compétences</dt>
                             <dd class="col-xs-12"><?= $desc['competences']; ?></dd>
                         </div>

@@ -6,8 +6,8 @@
                 <!--------------------------------HAMBURGER + LOGO MENU--> 
                 <div class="navbar-header">
                     <!-- HAMBURGER -->
-                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#menuprincipal">
-                        <img id="hamburger" src="media/composants/hamburger.png" width="25em"> 
+                    <button id="btnhamburger" class="navbar-toggle" type="button" data-toggle="collapse" data-target="#menuprincipal">
+                        <img id="hamburger" src="media/composants/hamburger.png" width="25vw"> 
                     </button> 
                     <!-- LOGO MENU -->
                     <a id="menubrand" href="index.php#accueil"><!--class="navbar-brand"-->

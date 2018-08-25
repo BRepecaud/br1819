@@ -5,10 +5,10 @@
                 <img id="br" class="img-responsive" src="media/logo_br_clair.png" alt="Logo Benjamin Répécaud" width="80%">
             </div>
         </header>   
-        <div class="col-md-12 text-center">
+        <div class="col-xs-12 text-center">
             <h3>Bienvenue - Welcome - Bienvenido - Bem-vindo</h3>
         </div>
-        <div class="col-md-12">
+        <div class="col-xs-12">
             <a class="btn btn-block smoothscroll" href="index.php#presentation" role="button"><span class="glyphicon glyphicon-chevron-down"></span></a>
         </div>
     </div>

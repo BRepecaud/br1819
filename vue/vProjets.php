@@ -10,21 +10,21 @@
         <div id="centerprojets" class="col-sm-offset-1 col-sm-10">
             
             <!--------------------------------LIGNE-->            
-            <div id="blocprojets" class="row">
+            <div id="blocprojets" class="col-xs-12">
                 <!--------------------------------Catégorie projets--> 
                 <div id="blocmenuprojets" class="col-xs-12">
                     <ul id="menuprojets" class="nav">
                         <li class="tout categorie-active col-sm-3 col-xs-6">
-                            <a class="nav-link " href="#/"><span><img src="media/composants/tout.png" width="50em"></span></a>
+                            <a class="nav-link " href="#/"><span><img src="media/composants/tout.png"></span></a>
                         </li>
                         <li class="developpement col-sm-3 col-xs-6">
-                            <a class="nav-link" href="#/"><span><img src="media/composants/dev.png" width="50em"></span></a>
+                            <a class="nav-link" href="#/"><span><img src="media/composants/dev.png"></span></a>
                         </li>
                         <li class="infographie col-sm-3 col-xs-6">
-                            <a class="nav-link" href="#/"><span><img src="media/composants/pinceau.png" width="50em"></span></a>
+                            <a class="nav-link" href="#/"><span><img src="media/composants/pinceau.png"></span></a>
                         </li>
                         <li class="video col-sm-3 col-xs-6">
-                            <a class="nav-link" href="#/"><span><img src="media/composants/video.png" width="50em"></span></a>
+                            <a class="nav-link" href="#/"><span><img src="media/composants/video.png"></span></a>
                         </li>
                     </ul>
                 </div>
