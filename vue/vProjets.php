@@ -43,7 +43,7 @@
                                 
                                 <div class="projet col-xs-6 col-sm-4 '.$proj['categorie'].'">
                                    <div class="vignette">                                   
-                                        <a href="index.php?action=descprojet&nomprojet='.$proj['nomprojet'].'">
+                                        <a href="index.php?action=descprojet&nomprojet='.$proj['nomprojet'].'" rel="follow">
                                             <div class="hoverprojet">
                                                 <h4>'.$proj['nomprojet'].'</h4>
                                                 <h5>'.$proj['alt_vignette'].'</h5>

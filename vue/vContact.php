@@ -16,12 +16,12 @@
             </div>
             
             <div class="info-contact col-md-12 col-xs-6">
-                <div class="icontact col-xs-12"><span class="fab fa-linkedin"></span></div>
+                <div class="icontact col-xs-12"><a href="www.linkedin.com/in/benjamin-répécaud-0aa13b146" target="blank"><span class="fab fa-linkedin"></span></a></div>
                 <div class="textcontact col-xs-12">Benjamin Répécaud</div>                
             </div>
             
             <div class="info-contact col-md-12 col-xs-6">
-                <div class="icontact col-xs-12"><span class="fab fa-github"></span></div>
+                <div class="icontact col-xs-12"><a href="https://github.com/BRepecaud"><span class="fab fa-github"></span></a></div>
                 <div class="textcontact col-xs-offset-4-12">BRepecaud</div>                
             </div>
         </div>

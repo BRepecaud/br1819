@@ -9,9 +9,6 @@
                     <div id="linkprojet"><a href="<?= $desc['lien'] ?>" target="blank"><span class="glyphicon glyphicon-link"></span> Lien </a></div>
                     <?php endif; ?>                    
                 </h3>
-
-
-                    
             </header>
             
             <!-- IMAGE / VIDEO DU PROJET   -->
