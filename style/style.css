@@ -143,11 +143,6 @@ PAGE PRESENTATION
 *****************************************
 */
 
-#presentation  
-{
-    font-size:3.5vmin;
-}
-
 .btn-presentation
 {
     width: 100%;
@@ -160,10 +155,48 @@ PAGE PRESENTATION
     background-color: orange;
     color:white !important;
 }
-
+/*
+------Texte
+*/
 .li-presentation
 {
     list-style-type: none;
+    font-size:1vw;
+    color: grey;
+}
+
+#parapresentation
+{
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+#linkpresentation
+{
+    text-decoration: none;
+    color: #EA6124;
+}
+
+#linkpresentation:hover
+{
+    opacity: .85;
+}
+/*
+------Icone
+*/
+#photopresentation
+{
+    width: 5vw;
+    border-radius: 50%;
+}
+.li-presentation span img
+{
+    width: 3vw;
+}
+
+.iconepresentation
+{
+    width: 2vw;
 }
 
 /*
@@ -344,12 +377,23 @@ PAGE CONTACT
     text-align: center;
 }
 
-.icontact
+.icontact, .icontact span
 {
     color:#EA6124;
     text-align: center;
     font-size:3vw;
 }
+
+.icontact a span
+{
+    opacity: .65;
+}
+
+.icontact a:hover span
+{
+    opacity: 1;
+}
+
 .info-contact
 {
     margin-top:5vh;
@@ -497,7 +541,21 @@ PAGE CONTACT
 
 @media(max-width: 991px)
 { 
-    
+/*
+------------------------PRESENTATION
+*/   
+/*
+------Texte
+*/
+.li-presentation
+{
+    font-size:4vw;
+}
+
+#parapresentation
+{
+    font-size: 4vw;
+}    
 /*
 ------------------------PROJETS
 */      
