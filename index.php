@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE HTML>
 <html>
     <?php 
@@ -5,19 +6,22 @@
     ?>
     
     <body>
+        <div id="background"></div>
         <?php
 
-        //---------------------------------------MENU
-            require 'vue/vMenu.php';
+            try
+            {
+            //---------------------------------------MENU
+                require 'vue/vMenu.php';
 
-        //---------------------------------------INCLUSION CONTROLEUR
-            /*
-                Soit descprojet, soit accueil
-             * vMenu: lien vers descprojet --> paramètre: action et nomprojet
-             * vérification de l'existance de ces paramètres
-             * si présent: require cDescprojet
-             * sinon: accueil
-            */
+            //---------------------------------------INCLUSION CONTROLEUR
+                /*
+                    Soit descprojet, soit accueil
+                 * vMenu: lien vers descprojet --> paramètre: action et nomprojet
+                 * vérification de l'existance de ces paramètres
+                 * si présent: require cDescprojet
+                 * sinon: accueil
+                */
 
                 if(isset($_GET['action']))
                 {
@@ -35,6 +39,14 @@
                 { 
                     require 'controleur/cMain.php';                
                 }
+            }
+            catch(Exception $e)
+            {
+                $e->getMessage();
+            }
         ?>
+               
+       <script src="js/main.js"></script>
+        
     </body>
 </html>
